@@ -42,5 +42,16 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ditto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/ditto_stock/
+**Duplicate stub — not enriched.** This repository was created from the API Evangelist
+secondary-market harvest backlog (a Forge Global "Ditto stock" listing) and profiles the same
+company already profiled in depth at [`api-evangelist/ditto-live`](https://github.com/api-evangelist/ditto-live).
+
+Ditto is an edge-native data sync platform — founded in 2018 by Adam Fish and Max Alexander,
+headquartered in San Francisco — that lets mobile and edge devices synchronize data peer-to-peer
+over Bluetooth, WiFi Direct and LAN with or without internet connectivity, backed by an optional
+cloud tier. Its developer surface (ditto.live, docs.ditto.live, the Cloud HTTP API and Edge Server
+HTTP API) is captured under `ditto-live`, so no artifacts were generated here. The correct
+disposition is duplicate retirement into `ditto-live`.
+
+- Company site: https://ditto.live/
+- Secondary-market listing this stub came from: https://forgeglobal.com/ditto_stock/

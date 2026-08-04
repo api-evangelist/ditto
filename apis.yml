@@ -1,17 +1,53 @@
 aid: ditto
 name: Ditto
-description: 'Ditto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'DUPLICATE STUB — do not enrich. This repository was created from the
+  API Evangelist secondary-market harvest backlog (Forge Global listing for "Ditto
+  stock") and profiles the same legal entity already profiled in depth at all/ditto-live
+  (aid ditto-live). Ditto is an edge-native data sync platform, founded in 2018 by
+  Adam Fish and Max Alexander, headquartered in San Francisco, that lets mobile and
+  edge devices synchronize data peer-to-peer over Bluetooth, WiFi Direct and LAN with
+  or without internet connectivity, backed by an optional cloud tier. The company has
+  raised roughly $136.7M across a 2021 seed, a 2023 Series A and an $82M Series B in
+  March 2025. Its developer surface (ditto.live, docs.ditto.live, the Cloud HTTP API
+  and Edge Server HTTP API) is already captured under all/ditto-live, so no artifacts
+  were generated here — the correct disposition is duplicate retirement into ditto-live
+  per the merge procedure, which is a human-reviewed step.'
 url: https://raw.githubusercontent.com/api-evangelist/ditto/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
-x-tier-reason: harvest
+x-tier-reason: duplicate-of-ditto-live
+x-duplicate-of: ditto-live
+x-duplicate-evidence:
+  determined: '2026-08-04'
+  method: searched
+  survivor: ditto-live
+  survivor_reason: 'all/ditto-live carries 6 OpenAPI definitions plus authentication/,
+    agentic-access/, security/, plans/, rate-limits/, finops/, rules/, vocabulary/,
+    json-schema/, json-ld/, examples/ and blogs/; all/ditto is an empty harvest stub.'
+  probes:
+  - url: https://www.nasdaqprivatemarket.com/company/ditto/
+    http_status: 200
+    finding: 'Ditto — founded 2018, San Francisco; founders Adam Fish (CEO) and Max
+      Alexander; website www.ditto.live'
+  - url: https://forgeglobal.com/ditto_stock/
+    http_status: 403
+    finding: 'Forge Global blocks automated fetch; the sibling /ditto_ipo/ listing
+      reports founded 2018 by Adam Fish, San Francisco, $136.7M raised — same entity.'
+  - url: https://ditto.live/
+    http_status: 200
+    finding: Live corporate/product site for the same company already profiled as ditto-live.
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Duplicate
+- Developer Tools
+- Database
+- Synchronization
+- Peer-to-Peer
+- Edge Computing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +56,16 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://ditto.live/
+- type: SecondaryMarket
   url: https://forgeglobal.com/ditto_stock/
+x-enrichment:
+  date: '2026-08-04'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+  note: 'Enrichment intentionally not run — this slug duplicates all/ditto-live. Enriching
+    it would split one company across two apis.io provider rows and two Kin Scores.
+    Real surfaces found during discovery (a conformant A2A agent card at
+    https://docs.ditto.live/.well-known/agent-card.json and an llms.txt at
+    https://docs.ditto.live/llms.txt) belong to ditto-live and should be harvested there.'
